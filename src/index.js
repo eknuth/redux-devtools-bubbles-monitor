@@ -35,12 +35,21 @@ export default class BubbleMonitor extends Component {
     toggleAction: PropTypes.func.isRequired, // ({ index })
     jumpToState: PropTypes.func.isRequired // ({ index })
   }
+  getNotificationTypeForAction (action) {
+    if (action.error) {
+      return toastr.error
+    } else if (action.type.startsWith('@@')) {
+      return toastr.info
+    } else {
+      return toastr.success
+    }
+  }
   render () {
     const { stagedActions } = this.props
     const action = stagedActions[stagedActions.length-1]
     const keys = Object.keys(action).filter(key => key !== 'type')
     const body = keys.map(key => `${key}: ${action[key]}`).join('<br/>')
-    let bubble = action.type.startsWith('@@')? toastr.info: toastr.success
+    const bubble = this.getNotificationTypeForAction(action)
     bubble(body, action.type)
     return null
   }
