@@ -6,6 +6,11 @@ An unobtrusive monitor for [Redux DevTools](https://github.com/gaearon/redux-dev
 ![](http://imgur.com/KSxngwN.gif)
 
 ## Setup
+### NPM
+Install the npm module.
+```
+npm install --save-dev redux-devtools-bubbles-monitor
+```
 Include the component with the usual DevTools setup.
 ### JSX
 ```javascript
