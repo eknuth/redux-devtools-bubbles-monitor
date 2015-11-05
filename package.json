@@ -1,6 +1,6 @@
 {
   "name": "redux-devtools-bubbles-monitor",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Toastr notifications of redux actions",
   "main": "lib/index.js",
   "scripts": {
@@ -46,13 +46,11 @@
   },
   "peerDependencies": {
     "react": "^0.13.3",
-    "redux-devtools": "^3.0.0-beta-3"
+    "redux-devtools": "^2.1.5"
   },
   "dependencies": {
     "jquery": "^2.1.4",
-    "react-json-tree": "^0.2.0",
     "react-pure-render": "^1.0.2",
-    "redux-devtools-themes": "^1.0.0",
     "toastr": "^2.1.2"
   }
 }

@@ -23,11 +23,7 @@ import BubblesMonitor from 'redux-devtools-bubbles-monitor'
 </DebugPanel>
 
 ```
-### CSS
-You also need to include the css for toastr.
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-```
+
 ### License
 
 MIT
