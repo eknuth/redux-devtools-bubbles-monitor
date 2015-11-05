@@ -15,7 +15,8 @@ Include the component with the usual DevTools setup.
 ### JSX
 ```javascript
 import BubblesMonitor from 'redux-devtools-bubbles-monitor'
-
+// requires webpack css loader or just include from cdn
+require('redux-devtools-bubbles-monitor/src/toastr.min.css')
 <DebugPanel top right bottom>
   <DevTools store={store}
             monitor={BubblesMonitor}
@@ -23,7 +24,11 @@ import BubblesMonitor from 'redux-devtools-bubbles-monitor'
 </DebugPanel>
 
 ```
-
+### CSS
+If you aren't using the webpack css loader you can include the css for toastr from cdn.
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+```
 ### License
 
 MIT
