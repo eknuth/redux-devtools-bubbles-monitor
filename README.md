@@ -16,7 +16,7 @@ Include the component with the usual DevTools setup.
 ```javascript
 import BubblesMonitor from 'redux-devtools-bubbles-monitor'
 // requires webpack css loader or just include from cdn
-require('redux-devtools-bubbles-monitor/src/toastr.min.css')
+require('redux-devtools-bubbles-monitor/lib/toastr.min.css')
 <DebugPanel top right bottom>
   <DevTools store={store}
             monitor={BubblesMonitor}
