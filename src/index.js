@@ -44,12 +44,28 @@ export default class BubbleMonitor extends Component {
       return toastr.success
     }
   }
+  getNotificationBodyForAction (action) {
+    const payload = {...action}
+    const keys = Object.keys(payload).filter(key => {
+      return key !== 'type' && key !== 'error'
+    })
+    const items = keys.map(key => {
+      const item = payload[key]
+      if (item instanceof Error) {
+        return `${key}: ${item}`
+      } else if (item !== null && typeof item === 'object') {
+        return `${key} (object keys): ${Object.keys(item).join(', ')}`
+      } else {
+        return `${key}: ${item}`
+      }
+    })
+    return items.join('<br/>')
+  }
   render () {
     const { stagedActions } = this.props
     const action = stagedActions[stagedActions.length-1]
-    const keys = Object.keys(action).filter(key => key !== 'type')
-    const body = keys.map(key => `${key}: ${action[key]}`).join('<br/>')
     const bubble = this.getNotificationTypeForAction(action)
+    const body = this.getNotificationBodyForAction(action)
     bubble(body, action.type)
     return null
   }
