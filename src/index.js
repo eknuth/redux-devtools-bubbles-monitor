@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 import toastr from 'toastr'
+import { isFSA } from 'flux-standard-action';
 
 toastr.options = {
   "closeButton": false,
@@ -66,7 +67,12 @@ export default class BubbleMonitor extends Component {
     const action = stagedActions[stagedActions.length-1]
     const bubble = this.getNotificationTypeForAction(action)
     const body = this.getNotificationBodyForAction(action)
+
     bubble(body, action.type)
+
+    if (!isFSA(action)) {
+      toastr.warning(`${action.type} is not a flux standard action.`)
+    }
     return null
   }
 }
