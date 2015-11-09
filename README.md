@@ -3,6 +3,8 @@ Redux DevTools Log Monitor
 
 An unobtrusive monitor for [Redux DevTools](https://github.com/gaearon/redux-devtools). Depends on toastr and jquery (sorry, it was easy!)
 
+[Monitor Demo](http://eknuth.github.io/redux-devtools-bubbles-monitor/)
+
 ## Behavior
 Redux actions are displayed as they are dispacted. The type of the action is shown along with the payload and other properties of the action. If an object is nested, only the top level keys are shown.
 
