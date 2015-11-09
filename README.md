@@ -3,6 +3,15 @@ Redux DevTools Log Monitor
 
 An unobtrusive monitor for [Redux DevTools](https://github.com/gaearon/redux-devtools). Depends on toastr and jquery (sorry, it was easy!)
 
+## Behavior
+Redux actions are displayed as they are dispacted. The type of the action is shown along with the payload and other properties of the action. If an object is nested, only the top level keys are shown.
+
+### Types of notifications
+[Error actions](https://github.com/acdlite/flux-standard-action#errors-as-a-first-class-concept) are shown as red alert notifications. Redux internal actions, including those from [redux router](https://github.com/rackt/redux-router) are shown as blue info notifications.
+
+### Flux standard actions
+A warning is shown if the action does not match the [flux standard action](https://github.com/acdlite/flux-standard-action) specification.
+
 ![](http://imgur.com/KSxngwN.gif)
 
 ## Setup
