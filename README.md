@@ -13,6 +13,7 @@ npm install --save-dev redux-devtools-bubbles-monitor
 ```
 Include the component with the usual DevTools setup.
 ### JSX
+The monitor respects the state of visibleOnLoad from the DevTools component props. If visibleOnLoad is true, notifications will appear when the DebugPanel component is mounted. <strong>Ctrl-h</strong> will toggle the notification state of the monitor.
 ```javascript
 import BubblesMonitor from 'redux-devtools-bubbles-monitor'
 // requires webpack css loader or just include from cdn
