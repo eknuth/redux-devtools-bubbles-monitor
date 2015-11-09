@@ -20519,7 +20519,7 @@
 	        { top: true, right: true, bottom: true },
 	        _react2['default'].createElement(_reduxDevtoolsLibReact.DevTools, { store: store,
 	          monitor: _reduxDevtoolsBubblesMonitor2['default'],
-	          visibleOnLoad: false })
+	          visibleOnLoad: true })
 	      )
 	    );
 	  };
