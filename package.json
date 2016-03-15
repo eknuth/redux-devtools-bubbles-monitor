@@ -1,6 +1,6 @@
 {
   "name": "redux-devtools-bubbles-monitor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Toastr notifications of redux actions",
   "main": "lib/index.js",
   "scripts": {
